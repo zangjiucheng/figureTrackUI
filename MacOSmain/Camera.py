@@ -33,7 +33,7 @@ class CameraProcess(multiprocessing.Process):
             img = cv2.flip(img, 1)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             results = my_hands.process(img)
-            # img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
             if results.multi_hand_landmarks:
                 fingers = []
                 handlist = results.multi_hand_landmarks[0]

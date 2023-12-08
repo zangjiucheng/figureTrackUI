@@ -2,9 +2,11 @@ from time import sleep
 import mediapipe
 from log import logger_config
 from MouseControl import mouseControl
+from multiprocessing import set_start_method
 
 if __name__ == '__main__':
-    # print(mediapipe.__file__)
+    set_start_method('fork') # or ‘spawn’
+    print(mediapipe.__file__)
     Mouse = mouseControl('Mouse Control')
     Mouse.start()
     logger = logger_config(log_path='log.txt', logging_name='handTrack')

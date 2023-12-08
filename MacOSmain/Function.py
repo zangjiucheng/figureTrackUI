@@ -37,8 +37,7 @@ class Unknow_Spotify():
         pass
 
     def func2(self):
-        pyautogui.hotkey('winleft', 'shift', 'S')
-
+        pass
 
 class Unknow_Close_Stop():
     def __init__(self):
@@ -48,7 +47,6 @@ class Unknow_Close_Stop():
         pass
 
     def func1(self):
-        pyautogui.hotkey('winleft', 'shift', 'q')
-
+        pass
     def func2(self):
         return True
